@@ -1,0 +1,32 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    {% block css_additional %}{% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static '/site1/css/index.css' %}">
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+<img src="site1/realtyestateapp/migration/static/img/gorod.jpg" />
+        <span class="fs-4">Парк развлечений</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Волшебный городок</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'cinema' %}">Кинотеатр</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'we' %}">О нас </a>
+        <a class="py-2 text-dark text-decoration-none" href="{% url 'reviews' %}">Отзывы</a>
+      </nav>
+    </div>
+
+<div class="contentblock"></div>
+
+{% block content %} {% endblock %}
+</body>
+</html>

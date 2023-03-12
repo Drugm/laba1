@@ -1,0 +1,43 @@
+{% extends 'realtyestateapp/base.html'%}
+
+{% block title %}
+Отзывы
+{% endblock %}
+
+{% block content %}
+
+<div class="contentblock_right">
+    <div align="center">
+<h2 class="chapter_arrow">Обратная связь</h2>
+<div xmlns="http://www.w3.org/1999/xhtml" class="formcontainer">
+        <input type="hidden" name="system_email_to" value="1971">
+    <label>ФИО<span class="f_required">
+    </span></label><input type="text" name="data[new][fb_fio]" data-rel="required">
+        <label>Компания</label><input type="text" name="data[new][fb_company]">
+        <label>Телефон</label><input type="text" name="data[new][fb_phone]">
+        <label>E-mail<span class="f_required">
+        </span>
+        </label>
+        <input type="text" name="data[new][fb_email]" data-rel="required">
+        <label>Тема сообщения</label><input type="text" name="data[new][fb_text]">
+        </span>
+        </label>
+        <input type="hidden" name="system_form_id" value="89">
+        <input type="hidden" name="ref_onsuccess" value="/webforms/posted/89">
+        <div style="margin-bottom:10px">
+            </label>
+        </div>
+        <div class="clear">
+        </div>
+        <label>
+            <input type="checkbox" required="required" name="terms" checked="" class="checkbox"> Я принимаю <a href="/personal-data/">Положение</a> и <a href="/agreement_oasis.pdf">Согласие</a> на обработку персональных данных.
+        </label><div class="btn_block">
+        <button type="submit" class="butn btn-red">Отправить
+        </button>
+    </div>
+    </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+
